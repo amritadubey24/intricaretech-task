@@ -1,0 +1,341 @@
+@import 'svg.scss';
+
+.pwd_cardWrapper {
+    .borderRight {
+        &:first-child {
+            border-right: 1px solid #BCBCBC
+        }
+    }
+
+    .col-lg-3.col-md-6:last-child {
+        .pwd_cardBlock.worksCards::after {
+            content: none;
+        }
+    }
+
+    .pwd_FormCard {
+        padding: 26px 26px;
+        transition: all 0.3s ease;
+        border-radius: 18px;
+        background: #F9F0F8;
+        border: 1px solid #EEEFFFFC;
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .pwd_cardBlock {
+        padding: 26px 26px;
+        transition: all 0.3s ease;
+        border-radius: 18px;
+        border: 1px solid transparent;
+        width: 543px;
+        margin: 0 auto;
+
+        &.testiCards {
+            background: #F9F0F8;
+            border: 1px solid #EEEFFFFC;
+            border-radius: 20px;
+            padding: 34px 25px;
+            width: auto;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .pwd_cardBody {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            .cardDes {
+                @include text(#2c2c2c, 16px, 26px, 600);
+            }
+
+            .ratingBlock {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .feedLogo {
+                    box-shadow: 0px 4px 34px 0px #ADADAD1A;
+                    background: #FFFFFF;
+                    border-radius: 7px;
+                    padding: 5px;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .rating {
+                    display: flex;
+                    align-items: center;
+
+                    .rateIcon {
+                        @include rateIcon;
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                    }
+                }
+            }
+
+            .pwd_cardFoot {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                margin-top: auto; // 👈 pushes footer to bottom
+                border-top: 1px solid #7A7A7A4F;
+                padding-top: 20px;
+
+                img {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                }
+
+                .clientInfo {
+                    .cardTitle {
+                        @include text(#090F4E, 20px, 20px, 600);
+                        margin-bottom: 8px;
+                    }
+
+                    .clientPosi {
+                        @include text(#696969, 14px, 14px, 400);
+                    }
+                }
+            }
+        }
+
+        &.worksCards {
+            width: auto;
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 8px 8px 0 8px;
+            height: 100%;
+            position: relative;
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 2px solid #2D96BC;
+            }
+
+
+
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     top: 25px;
+            //     right: -24px;
+            //     width: 21px;
+            //     height: 21px;
+            //     border: 6px solid #2D96BC;
+            //     border-left: none;
+            //     border-bottom: none;
+            //     border-radius: 0 40px 0 0;
+            //     transform: rotate(-45deg);
+
+            // }
+
+            .pwd_cardBody {
+                .count {
+                    font-family: 'Sriracha';
+                    text-align: center;
+                    @include text(#2D96BC, 110.96px, 110px, 400);
+                }
+
+                .cardTitle {
+                    text-align: center;
+                    @include text(#090F4E, 24px, 100%, 600);
+                    margin-bottom: 5px;
+                }
+
+                .cardDes {
+                    text-align: center;
+                    @include text(#4C4C4C, 16px, 22px, 400);
+                    margin-bottom: 20px;
+                }
+
+            }
+
+            .card-img {
+                margin-bottom: 0;
+            }
+        }
+
+        .card-img {
+            margin-bottom: 20px;
+        }
+
+        .pwd_cardBody {
+
+
+            h3 {
+                @include text($white, 24px, 100%, 600);
+                margin-bottom: 25px;
+            }
+
+            ul {
+                li {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .li_icon {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        &.red-cross {
+                            @include red-cross;
+                        }
+
+                        &.bi-direct {
+                            @include bi-direct;
+                        }
+
+                        &.contracts {
+                            @include contracts;
+                        }
+
+                        &.crm-overlay {
+                            @include crm-overlay;
+                        }
+
+                        &.ai-response {
+                            @include ai-response;
+                        }
+
+                    }
+
+                    .li_Content {
+                        h6 {
+                            @include text(#262626, 20px, 100%, 600);
+
+                            span {
+                                background: #FFDCD4;
+                                box-shadow: 0px 38.15px 79.48px 0px #110C2E26;
+                                padding: 6px 6px;
+                                border-radius: 27px;
+                                @include text(#FF4C51, 13px, 100%, 500);
+                            }
+                        }
+
+                        p {
+                            @include text(#4C4C4C, 16px, 24px, 400);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.red-card {
+            background: #FFF7F8;
+
+            .pwd_cardBody {
+                h3 {
+
+                    color: #D24B68;
+                }
+            }
+
+            &:hover {
+                border: 1px solid #D24B6880;
+            }
+        }
+
+        &.green-card {
+            box-shadow: 0px 8px 24px 0px #959DA533;
+
+            .pwd_cardBody {
+                h3 {
+                    color: #097737;
+                }
+            }
+
+            &:hover {
+                border: 1px solid #097737;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 24px 0px;
+
+        }
+    }
+}
+
+.swiper-nav {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    gap: 27px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        border: 1px solid #090F4E;
+        padding: 16px 16px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        position: relative;
+        right: -20px;
+
+        background-color: $white;
+
+        &:hover {
+            background: #090F4E;
+            transition: all .3s ease-in-out;
+
+            &:after {
+                content: '';
+                @include prevIcon2;
+            }
+
+        }
+
+        &:after {
+            content: '';
+            width: 14px;
+            height: 14px;
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include prevIcon;
+        }
+    }
+
+
+
+    .swiper-button-next {
+        background: #090F4E;
+        right: 0;
+
+        &:hover {
+            background: #fff;
+            transition: all .3s ease-in-out;
+
+            &:after {
+                content: '';
+                @include nextIcon2;
+            }
+
+        }
+
+        &:after {
+            content: '';
+            @include nextIcon;
+        }
+    }
+}

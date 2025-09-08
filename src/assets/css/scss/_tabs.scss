@@ -1,0 +1,87 @@
+.pwdTabs {
+    justify-content: space-between;
+    border-bottom: 3px solid #EDEDED;
+    border-radius: 11px;
+    margin-bottom: 40px;
+
+    .nav-item {
+        .nav-link {
+            @include text(#090F4E, 18px, 100%, 600);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-radius: 0;
+
+            &.active {
+                border-bottom: 3px solid #090F4E;
+            }
+
+            .tabIcon {
+                width: 34px;
+                height: 34px;
+                display: block;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                &.crm {
+                    @include crm;
+                }
+
+                &.data {
+                    @include data;
+                }
+
+                &.bulk {
+                    @include bulk;
+                }
+
+                &.product {
+                    @include product;
+                }
+            }
+        }
+    }
+}
+
+.tabCard {
+    box-shadow: 0px 2px 8px 0px #63636333;
+    background: #F0F4FD;
+    border-radius: 12px;
+    padding: 25px 18px;
+    height: 100%;
+
+    h5 {
+        @include text(#262626, 22px, 29px, 600);
+    }
+
+    a {
+        @include text(#097737, 18px, 29px, 600);
+        margin-bottom: 20px;
+        display: block;
+
+        &:hover {
+            transition: all .3s ease-in;
+            opacity: .8;
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+}
+
+.tabTitle {
+    @include text(#4D4D4D, 22px, 29px, 400);
+    margin-bottom: 28px;
+
+
+    span {
+        background: #FFDCD4;
+        padding: 6px 6px;
+        border-radius: 25px;
+        @include text(#FF4C51, 13px, 100%, 500);
+    }
+}

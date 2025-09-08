@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    font-family: "Exo 2", Sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+section {
+    padding: 60px 0;
+    position: relative;
+}
+
+.transBG {
+    background-color: transparent !important;
+
+    &::after {
+        content: unset !important;
+    }
+}
+
+@mixin text($color, $font-size, $line-height, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+.border-top {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 51, 102, .2);
+}
+
+
+
+.btn {
+    padding: 12px 20px;
+    @include text($white, 15px, 18.4px, 500);
+    transition: $transition;
+    border-radius: 10px;
+    min-height: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    min-width: 215px;
+
+    &.btn-secondary {
+        background: #B3FC6A;
+        color: #242424;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 13px;
+        padding: 12px 12px;
+        min-height: 58px;
+        border: none;
+        min-width: 298px;
+
+
+    }
+
+    .chevronIcon {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 5L20 12M20 12L13 19M20 12H4' stroke='%23171717' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 24px;
+    }
+
+
+    &.btn-sm {
+        min-width: 126px;
+        color: #2D96BC;
+        border: 1px solid #2D96BC;
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &.btn-primary {
+        box-shadow: 0px 10.5px 22.5px 0px #0000000A;
+        background-color: #2D96BC;
+        border: none;
+
+        &:hover,
+        &.active {
+            background: $secondary-color;
+            box-shadow: 0px 14px 30px 0px #0000000A;
+            border: none;
+            color: $white;
+        }
+    }
+
+
+}
+
+.justify-self-center {
+    justify-self: center;
+}
+
+.pwd_titleBlock {
+    text-align: center;
+    max-width: 991px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    &.left_title {
+        margin: 0;
+        text-align: left;
+        margin-bottom: 30px
+    }
+
+    h2 {
+
+        @include text(#090F4E, 36px, 100%, 600);
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include text(#4D4D4D, 18px, 29px, 400);
+    }
+}
+
+.bg_secondary {
+    background: #EAEFFA;
+}
+
+@mixin bg-color {
+    background: linear-gradient(0deg, rgba(0, 51, 102, 0.04), rgba(0, 51, 102, 0.04));
+}
+
+.grayLine {
+    border: 1px solid #F1F1F1;
+    display: block;
+}
+
+.table-dark>tr>th {
+    background-color: $primary-color !important;
+}
+
+tr>td {
+    @include text($text-color-card, 14px, 24px, 400);
+
+}
+
+.actionButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
+    .action-icon {
+        border: 1px solid rgba(0, 51, 102, 0.2);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ffffff29;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 14px;
+        color: #111111;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transition: all .3s ease-in-out;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+}
+
+.pmd_formWrapper {
+    .pmd_formInner {
+        background-color: #EAEFFB;
+        box-shadow: 0px 2px 8px 0px rgba(197.20000000000002, 197.20000000000002, 197.20000000000002, 0.5);
+
+        padding: 20px 20px;
+        border-radius: 12px;
+    }
+}
+
+// responsive css start here
+
+
+@media only screen and (max-width: 1366px) {
+
+    section {
+        padding: 50px 0;
+    }
+
+    .icc_titleBlock {
+        .icc_title {
+            font-size: 26px;
+            line-height: 48px;
+        }
+
+        .icc_subTitle {
+            font-size: 15px;
+            padding-top: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .icc_titleBlock {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    section {
+        padding: 40px 0;
+    }
+
+    .flexDirection {
+        flex-direction: column-reverse;
+    }
+
+    .icc_titleBlock {
+        .icc_title {
+            font-size: 24px;
+            line-height: 40px;
+
+            &::before {
+                bottom: -7px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .image-wrapper {
+        margin-top: 20px;
+
+        img {
+            text-align: left;
+            width: auto;
+            height: auto;
+        }
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 560px) {
+    .icc_titleBlock {
+        .icc_title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+}

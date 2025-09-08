@@ -1,0 +1,178 @@
+// home banner css start 
+
+.pwd_bannerBlock--wrapper {
+    text-align: center;
+    z-index: 1;
+    background: #FAFCFF;
+
+    &:after {
+        content: '';
+        background-image: url('../../images/banner-bg-texure.png');
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        background-position: bottom;
+        background-size: cover;
+        z-index: -1;
+    }
+
+
+    .pwd_bannerContent {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pwd_highlight {
+        padding: 8px 10px 8px 10px;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: #9ACCFF;
+        border-radius: 20px 20px 20px 20px;
+
+        font-size: 15px;
+        font-weight: 400;
+        color: #63657E;
+        display: inline-block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .bannerTitle {
+
+        font-size: 58px;
+        font-weight: 600;
+        line-height: 69px;
+        color: #121212;
+
+
+        span {
+            display: inline-block;
+            color: #2D96BC;
+            position: relative;
+            padding-bottom: 15px;
+
+
+            &::after {
+                content: '';
+                background: url('../../images/icons/line-1.webp');
+                background-position: left;
+                background-repeat: no-repeat;
+                width: 100%;
+                position: absolute;
+                height: 16px;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .bannerSubtitle {
+
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 28px;
+        color: #363636;
+        max-width: 840px;
+        margin: 0 auto;
+    }
+
+    .workItem {
+        background: linear-gradient(90.37deg, #5ED3FF -12.35%, #6EC6FE 0.67%, #EB65F4 100.24%, #FD58F2 114.28%);
+        padding: 20px 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 423px;
+        width: fit-content;
+        margin: 0 auto;
+        gap: 25px;
+
+        li {
+
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 22px;
+            line-height: 28px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+        }
+
+        .crm-items {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            .crm-logo {
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+    .chAv {
+        background-color: #373737;
+        padding: 12px 12px;
+        border-style: solid;
+        border-width: 2px 2px 2px 2px;
+        border-color: #373737;
+        border-radius: 13px;
+        align-items: center;
+        display: flex;
+        text-align: left;
+        gap: 5px;
+        min-height: 58px;
+        height: 58px;
+
+        .chCont {
+            h4 {
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
+                color: #E4E4E4;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            p {
+                color: #fff;
+                font-weight: 500;
+                font-size: 16px;
+
+            }
+        }
+
+        .chIcon {
+            img {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+    }
+
+    .availability {
+
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+// Responsive Css Here 
+
+@media only screen and (max-width: 1366px) {}
+
+
+
+@media only screen and (max-width: 991px) {}
+
+
+
+@media only screen and (max-width: 768px) {}
